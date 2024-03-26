@@ -36,11 +36,11 @@ _byobu_sourced=1 . /usr/bin/byobu-launch 2>/dev/null || true
 # !! Contents within this block are managed by juliaup !!
 
 case ":$PATH:" in
-    *:/home/nicus/.juliaup/bin:*)
+    *:~/.juliaup/bin:*)
         ;;
 
     *)
-        export PATH=/home/nicus/.juliaup/bin${PATH:+:${PATH}}
+        export PATH=~/.juliaup/bin${PATH:+:${PATH}}
         ;;
 esac
 

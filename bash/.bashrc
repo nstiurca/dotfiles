@@ -115,7 +115,7 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-[ -r /home/nicus/.byobu/prompt ] && . /home/nicus/.byobu/prompt   #byobu-prompt#
+[ -r ~/.byobu/prompt ] && . ~/.byobu/prompt   #byobu-prompt#
 
 # export JULIA_PKG_DEVDIR=~/nlp
 export OPENAI_API_KEY=`cat ~/.openai_api_key`
@@ -131,11 +131,11 @@ export JULIA_NUM_THREADS=auto
 # !! Contents within this block are managed by juliaup !!
 
 case ":$PATH:" in
-    *:/home/nicus/.juliaup/bin:*)
+    *:~/.juliaup/bin:*)
         ;;
 
     *)
-        export PATH=/home/nicus/.juliaup/bin${PATH:+:${PATH}}
+        export PATH=~/.juliaup/bin${PATH:+:${PATH}}
         ;;
 esac
 
