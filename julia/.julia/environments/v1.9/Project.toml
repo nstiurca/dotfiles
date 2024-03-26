@@ -1,0 +1,6 @@
+[deps]
+Genie = "c43c736e-a2d1-11e8-161f-af95117fbd1e"
+JSON3 = "0f8b85d8-7281-11e9-16c2-39a750bddbf1"
+JuliaSyntax = "70703baa-626e-46a2-a12c-08ffd08c73b4"
+OhMyREPL = "5fb14364-9ced-5910-84b2-373655c76a03"
+Revise = "295af30f-e4ad-537b-8983-00126c2a3abe"

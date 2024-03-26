@@ -1,0 +1,10 @@
+[deps]
+CompatHelper = "aa819f21-2bde-4658-8897-bab36330d9b7"
+Genie = "c43c736e-a2d1-11e8-161f-af95117fbd1e"
+HTTP = "cd3eb016-35fb-5094-929b-558a96fad6f3"
+JuliaFormatter = "98e50ef6-434e-11e9-1051-2b60c6c9e899"
+JuliaSyntax = "70703baa-626e-46a2-a12c-08ffd08c73b4"
+OhMyREPL = "5fb14364-9ced-5910-84b2-373655c76a03"
+Revise = "295af30f-e4ad-537b-8983-00126c2a3abe"
+SearchLight = "340e8cb6-72eb-11e8-37ce-c97ebeb32050"
+SearchLightMySQL = "1297d576-4826-11ea-035e-9995c721bad1"
