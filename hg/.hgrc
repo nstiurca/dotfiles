@@ -1,0 +1,21 @@
+[ui]
+#username = nstiurca
+username = Nicu Stiurca <nstiurca@pm.me>
+
+[extensions]
+absorb =
+amend =
+convert =
+eol =
+extdiff =
+# hggit = ~/.hgext/hg-git/hggit
+hggit =
+hgk =
+histedit =
+mq =
+rebase =
+uncommit =
+
+[default]
+rebase= --keepbranch
+
