@@ -8,8 +8,10 @@ Configuration files managed using GNU stow.
 sudo apt install git stow
 git clone git@github.com:nstiurca/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
-stow *
+stow */
 ```
+
+**Note:** The trailing `/` in `*/` is important to avoid trying to stow this README.
 
 Alternatively, for the last step stow only what's needed on the current machine.
 
