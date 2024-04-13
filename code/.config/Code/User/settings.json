@@ -1,0 +1,27 @@
+{
+    "yaml.schemas": {
+        "file:///home/nicu/.vscode/extensions/atlassian.atlascode-3.0.10/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    },
+    "redhat.telemetry.enabled": true,
+    "atlascode.jira.jqlList": [
+        {
+            "id": "e4d1bfe5-6c50-4dd4-b3f7-38a33effa748",
+            "enabled": true,
+            "name": "My traclabs Issues",
+            "query": "assignee = currentUser() AND resolution = Unresolved ORDER BY lastViewed DESC",
+            "siteId": "2b7d7789-cd70-47ec-b8ab-b8ec9b923bd0",
+            "monitor": true
+        }
+    ],
+    "workbench.colorTheme": "Visual Studio Light",
+    "terminal.integrated.commandsToSkipShell": [
+        "language-julia.interrupt"
+    ],
+    "julia.symbolCacheDownload": true,
+    "[julia]": {
+        "editor.defaultFormatter": "julialang.language-julia"
+    },
+    "remote.autoForwardPortsSource": "hybrid",
+    "julia.enableTelemetry": true,
+    "files.autoSave": "onFocusChange"
+}
