@@ -23,5 +23,11 @@
     },
     "remote.autoForwardPortsSource": "hybrid",
     "julia.enableTelemetry": true,
-    "files.autoSave": "onFocusChange"
+    "files.autoSave": "onFocusChange",
+    "codeium.enableConfig": {
+        "*": true,
+        "markdown": true
+    },
+    "workbench.quickOpen.closeOnFocusLost": false,
+    "workbench.editor.limit.enabled": true
 }
