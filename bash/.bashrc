@@ -143,3 +143,4 @@ esac
 
 export MOZ_X11_EGL=1
 export MOZ_ENABLE_WAYLAND=1
+export DOCKER_HOST=unix:///run/user/$UID/podman/podman.sock
