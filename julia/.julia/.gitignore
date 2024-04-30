@@ -1,0 +1,8 @@
+artifacts/
+compiled/
+juliaup/
+logs/
+packages/
+registries/
+scratchspaces/
+
