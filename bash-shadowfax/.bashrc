@@ -85,7 +85,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
 alias ll='ls -alF'
@@ -116,6 +116,26 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+case ":$PATH:" in
+    *:$HOME/.juliaup/bin:*)
+        ;;
+
+    *)
+        export PATH=$HOME/.juliaup/bin${PATH:+:${PATH}}
+        ;;
+esac
+
+# <<< juliaup initialize <<<
+export JULIA_PROJECT=@.
+
+GITAWAREPROMPT=~/.bash/git-aware-prompt
+. "${GITAWAREPROMPT}/main.sh"
+export PS1="\${debian_chroot:+(\$debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
+
 export CFLAGS="-fstack-protector-strong -Wformat -Werror=format-security"
 #export CFLAGS="$CFLAGS -Wall -Wextra"
 export CFLAGS="$CFLAGS -g -fno-limit-debug-info -fno-omit-frame-pointer"  # some nice debugging flags
@@ -131,16 +151,12 @@ export CMAKE_BUILD_TYPE="RelWithDebInfo"
 export CMAKE_CONFIGURATION_TYPES="RelWithDebInfo;Debug"
 export CMAKE_EXPORT_COMPILE_COMMANDS="TRUE"
 
-export ROSCONSOLE_FORMAT='[${severity}] [${time:%T%F}] [${node}] ${file}:${line}.${function} -- ${message}'
-
-GITAWAREPROMPT=~/.bash/git-aware-prompt
-source "${GITAWAREPROMPT}/main.sh"
-export PS1="\${debian_chroot:+(\$debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 use_clang
 use_ccache
 
 source /opt/intel/oneapi/vtune/latest/env/vars.sh
 
+export ROSCONSOLE_FORMAT='[${severity}] [${time:%T%F}] [${node}] ${file}:${line}.${function} -- ${message}'
 source /opt/ros/noetic/setup.bash
 # source ~/src/cartel_2_repos/devel/setup.bash
 # source ~/cartel2_ws/devel/setup.bash
@@ -149,21 +165,6 @@ source ~/.secrets
 DOCKER_BUILDKIT=1
 
 
-# >>> juliaup initialize >>>
-
-# !! Contents within this block are managed by juliaup !!
-
-case ":$PATH:" in
-    *:/home/nicu/.juliaup/bin:*)
-        ;;
-
-    *)
-        export PATH=/home/nicu/.juliaup/bin${PATH:+:${PATH}}
-        ;;
-esac
-
-# <<< juliaup initialize <<<
-export JULIA_PROJECT=@.
 
 # source ~/ros/guardian/devel/setup.bash
 source ~/ros/aces_2_repos/devel/setup.bash

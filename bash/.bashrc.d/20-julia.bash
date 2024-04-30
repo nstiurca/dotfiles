@@ -13,5 +13,6 @@ case ":$PATH:" in
 esac
 
 # <<< juliaup initialize <<<
+export JULIA_PROJECT=@.
 fi
 
