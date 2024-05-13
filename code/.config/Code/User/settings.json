@@ -1,11 +1,40 @@
 {
+    "workbench.colorTheme": "Solarized Light",
+    "workbench.colorCustomizations": {
+        "editorUnnecessaryCode.opacity": "#000000FF",
+        "editorUnnecessaryCode.border": "#ff9100"
+    },
+    "gitlens.hovers.currentLine.over": "line",
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "git.autofetch": true,
+    "git.openRepositoryInParentFolders": "always",
+    "cmake.generator": "Ninja",
+    "ninjabuild.ninjaBuildPath": "${workspaceFolder}/build/build.ninja",
+    "ros.distro": "noetic",
+    "cmake.installPrefix": "${workspaceFolder}/install/",
+    "cmake.sourceDirectory": "${workspaceFolder}/src/",
+    "cmake.skipConfigureIfCachePresent": true,
+    "C_Cpp.default.compilerPath": "/usr/lib/ccache/clang",
+    "C_Cpp.default.cppStandard": "c++17",
+    "C_Cpp.default.cStandard": "c17",
+    "cmake.configureOnOpen": false,
+    "cmake.ignoreCMakeListsMissing": true,
+    "cmake.loadCompileCommands": true,
+    "cmake.buildDirectory": "${workspaceFolder}/build",
+    "C_Cpp.files.exclude": {
+
+        "**/.vscode": true,
+        "**/.vs": true
+    },
     "yaml.schemas": {
         "file:///home/nicu/.vscode/extensions/atlassian.atlascode-3.0.10/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
     },
-    "redhat.telemetry.enabled": true,
+    "redhat.telemetry.enabled": false,
     "atlascode.jira.jqlList": [
         {
-            "id": "e4d1bfe5-6c50-4dd4-b3f7-38a33effa748",
+            "id": "b27ed0c5-ee78-4b25-9712-4e1e45c8024e",
             "enabled": true,
             "name": "My traclabs Issues",
             "query": "assignee = currentUser() AND resolution = Unresolved ORDER BY lastViewed DESC",
@@ -13,7 +42,13 @@
             "monitor": true
         }
     ],
-    "workbench.colorTheme": "Visual Studio Light",
+    "lldb.suppressUpdateNotifications": true,
+    "editor.stickyScroll.enabled": true,
+    "editor.scrollbar.horizontal": "visible",
+    "editor.scrollbar.vertical": "visible",
+    "workbench.editor.wrapTabs": true,
+    "workbench.editor.highlightModifiedTabs": true,
+    "launchqtcreator.qtDesignerPath": "/home/nicu/cartel2_ws/src/craftsman_application_gui/craftsman_application_gui/ui/rviz_craftsman_panel.ui",
     "terminal.integrated.commandsToSkipShell": [
         "language-julia.interrupt"
     ],
@@ -22,12 +57,42 @@
         "editor.defaultFormatter": "julialang.language-julia"
     },
     "remote.autoForwardPortsSource": "hybrid",
-    "julia.enableTelemetry": true,
+    "julia.enableTelemetry": false,
     "files.autoSave": "onFocusChange",
+    "cmake.showOptionsMovedNotification": false,
     "codeium.enableConfig": {
         "*": true,
-        "markdown": true
+        "markdown": true,
+        "xml": true
     },
+    "ros.isolateEnvironment": true,
+    "ros.rosSetupScript": "${workspaceFolder}/devel/setup.bash",
+    "julia.cellDelimiters": [
+
+        "^##(?!#)",
+        "^#(\\s?)%%",
+        "^#-"
+    ],
+    "cmake.preferredGenerators": [
+        "Ninja"
+    ],
+    "julia.executablePath": "${home}/.juliaup/bin/julia",
+    "git-graph.openToTheRepoOfTheActiveTextEditorDocument": true,
+    "git-graph.maxDepthOfRepoSearch": 3,
+    "git.repositoryScanMaxDepth": 3,
+    "python.createEnvironment.trigger": "off",
+    "files.trimTrailingWhitespace": true,
+    "markdown.extension.theming.decoration.renderTrailingSpace": true,
+    "editor.renderWhitespace": "trailing",
+    "editor.minimap.enabled": false,
+    "cmake.cmakePath": "/usr/bin/cmake",
+    "ninjabuild.ninjaExecutable": "/usr/bin/ninja",
+    "ninjabuild.testExecutablesPath": "${workspaceFolder}/devel/lib/",
+    "ninjabuild.ninjaArguments": [
+    ],
+    "cmakeExplorer.buildDir": "build/",
+    "editor.wordWrapColumn": 120,
+    "editor.wrappingStrategy": "advanced",
     "workbench.quickOpen.closeOnFocusLost": false,
     "workbench.editor.limit.enabled": true
 }
