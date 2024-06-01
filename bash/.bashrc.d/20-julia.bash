@@ -13,6 +13,8 @@ case ":$PATH:" in
 esac
 
 # <<< juliaup initialize <<<
+export JULIA_PKG_DEVDIR=~/src
 export JULIA_PROJECT=@.
+export JULIA_NUM_THREADS=auto
 fi
 
