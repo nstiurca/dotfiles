@@ -14,8 +14,8 @@ case $TOOLBX_NAME.$HOSTNAME in
         export CMAKE_BUILD_TYPE="RelWithDebInfo"
         export CMAKE_CONFIGURATION_TYPES="RelWithDebInfo;Debug"
         export CMAKE_EXPORT_COMPILE_COMMANDS="TRUE"
-	use_clang
-        use_ccache
+	[[ $(type -t use_clang ) = 'alias' ]] && use_clang
+        [[ $(type -t use_ccache) = 'alias' ]] && use_ccache
         ;;
 esac
 
