@@ -19,4 +19,5 @@ alias cninja='catkin_ninja'
 alias cninjai='catkin_ninja_isolated'
 alias rosed='EDITOR=code rosed'
 alias rgz='rocker --x11 --user --home --ignition fortress:focal osrf/ros:noetic-desktop'
+alias dockerc='docker compose'
 
