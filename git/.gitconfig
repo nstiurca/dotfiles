@@ -2,6 +2,9 @@
 	name = Nicu Stiurca
 	email = nstiurca@pm.me
 
+[includeIf "hasconfig:remote.*.url:*:traclabs/**"]
+	path = ~/.gitconfig.traclabs
+
 [push]
 	default = current
 	autoSetupRemote = true
