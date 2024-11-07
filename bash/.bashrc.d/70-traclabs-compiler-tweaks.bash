@@ -1,5 +1,5 @@
 case $TOOLBX_NAME.$HOSTNAME in
-    .shadowfax)
+    .shadowfax|.docker-desktop)
         export CFLAGS="-fstack-protector-strong -Wformat -Werror=format-security"
         # export CFLAGS="$CFLAGS -Wall -Wextra"
         export CFLAGS="$CFLAGS -g -fno-limit-debug-info -fno-omit-frame-pointer"  # some nice debugging flags
