@@ -1,5 +1,5 @@
 [core]
-	editor=flatpak run re.sonny.Commit
+	editor = flatpak run re.sonny.Commit @@
 
 [user]
 	name = Nicu Stiurca
