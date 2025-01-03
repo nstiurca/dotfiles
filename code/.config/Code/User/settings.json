@@ -76,7 +76,7 @@
     "cmake.preferredGenerators": [
         "Ninja"
     ],
-    "julia.executablePath": "${home}/.juliaup/bin/julia",
+    "julia.executablePath": "~/.juliaup/bin/julia",
     "git-graph.openToTheRepoOfTheActiveTextEditorDocument": true,
     "git-graph.maxDepthOfRepoSearch": 3,
     "git.repositoryScanMaxDepth": 3,
@@ -94,5 +94,25 @@
     "editor.wordWrapColumn": 120,
     "editor.wrappingStrategy": "advanced",
     "workbench.quickOpen.closeOnFocusLost": false,
-    "workbench.editor.limit.enabled": true
+    "workbench.editor.limit.enabled": true,
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ],
+    "cmake.configureOnStart": false,
+    "cmake.cpptools.browseTargets": [
+
+    ],
+    "cmake.cpptools.intelliSenseMode": "gcc-x64",
+    "cmake.cpptools.languageConfiguration.CXX": {
+
+    },
+    "cmake.automaticReconfigure": false,
+    "dev.containers.mountWaylandSocket": false,
+    "dev.containers.defaultExtensionsIfInstalledLocally": [
+        "GitHub.vscode-pull-request-github"
+    ],
+    "dev.containers.dockerPath": "podman",
+    "docker.dockerPath": "/usr/bin/podman",
+    "docker.commands.build": "${containerCommand} build --pull --rm -f \"${dockerfile}\" -t ${tag} \"${context}\""
 }
