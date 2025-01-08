@@ -117,5 +117,8 @@
     ],
     "dev.containers.dockerPath": "podman",
     "docker.dockerPath": "/usr/bin/podman",
-    "docker.commands.build": "${containerCommand} build --pull --rm -f \"${dockerfile}\" -t ${tag} \"${context}\""
+    "docker.commands.build": "${containerCommand} build --pull --rm -f \"${dockerfile}\" -t ${tag} \"${context}\"",
+    "search.useIgnoreFiles": false,
+    "explorer.excludeGitIgnore": false,
+    "search.useGlobalIgnoreFiles": false
 }
