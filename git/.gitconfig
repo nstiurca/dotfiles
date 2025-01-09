@@ -6,7 +6,7 @@
 	email = nstiurca@pm.me
 
 [includeIf "hasconfig:remote.*.url:*:traclabs/**"]
-	path = ~/.gitconfig.traclabs
+	path = ~/.config/user-traclabs.gitconfig
 
 [push]
 	default = current
