@@ -1,11 +1,12 @@
-#if isinteractive()
+# Import Pkg because of bug
+# https://github.com/KristofferC/OhMyREPL.jl/issues/345
+import Pkg
+
 atreplinit() do repl
-    #for mod in [:JuliaSyntax, :OhMyREPL, :Revise]
     for mod in [:OhMyREPL, :Revise]
         try
             @eval import $mod
             @info "$mod loaded."
-	    mod == :JuliaSyntax && Base.invokelatest(JuliaSyntax.enable_in_core!, true)
         catch e
             @warn "Error initializing $mod" exception=(e, catch_backtrace())
         end
@@ -32,7 +33,7 @@ if !haskey(ENV, "OPENAI_API_KEY")
     try
         ENV["OPENAI_API_KEY"] = readchomp(expanduser("~/.openai_api_key"))
     catch e
-        @warn "Error reading key from file" exception=(e, catch_backtrace())
+        @debug "Error reading key from file" exception=(e, catch_backtrace())
     end
 end
 
