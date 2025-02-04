@@ -29,7 +29,7 @@
         "**/.vs": true
     },
     "yaml.schemas": {
-        "file:///home/nicu/.vscode/extensions/atlassian.atlascode-3.0.10/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+        "file:///home/nicu/.vscode/extensions/atlassian.atlascode-3.0.15/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
     },
     "redhat.telemetry.enabled": false,
     "atlascode.jira.jqlList": [
@@ -76,7 +76,7 @@
     "cmake.preferredGenerators": [
         "Ninja"
     ],
-    "julia.executablePath": "~/.juliaup/bin/julia",
+    "julia.executablePath": "${home}/.juliaup/bin/julia",
     "git-graph.openToTheRepoOfTheActiveTextEditorDocument": true,
     "git-graph.maxDepthOfRepoSearch": 3,
     "git.repositoryScanMaxDepth": 3,
@@ -86,7 +86,10 @@
     "editor.renderWhitespace": "trailing",
     "editor.minimap.enabled": false,
     "cmake.cmakePath": "/usr/bin/cmake",
-    "ninjabuild.ninjaExecutable": "/usr/bin/ninja",
+    "ninjabuild.ninjaExecutable": "/usr/bin/ninja -C ${workspaceFolder}/build/",
+    "ninjabuild.cppconfig.defines": [
+    ],
+    "ninjabuild.ninjaProjectRoot": "${workspaceFolder}/build/",
     "ninjabuild.testExecutablesPath": "${workspaceFolder}/devel/lib/",
     "ninjabuild.ninjaArguments": [
     ],
@@ -114,5 +117,8 @@
     ],
     "dev.containers.dockerPath": "podman",
     "docker.dockerPath": "/usr/bin/podman",
-    "docker.commands.build": "${containerCommand} build --pull --rm -f \"${dockerfile}\" -t ${tag} \"${context}\""
+    "docker.commands.build": "${containerCommand} build --pull --rm -f \"${dockerfile}\" -t ${tag} \"${context}\"",
+    "search.useIgnoreFiles": false,
+    "explorer.excludeGitIgnore": false,
+    "search.useGlobalIgnoreFiles": false
 }

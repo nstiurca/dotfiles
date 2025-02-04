@@ -1,6 +1,6 @@
 case $TOOLBX_NAME.$HOSTNAME in
     .shadowfax|.docker-desktop)
-        export CFLAGS="-fstack-protector-strong -Wformat -Werror=format-security"
+        export CFLAGS="-fstack-protector-strong -Wformat -Werror=format-security -Wno-unknown-warning-option -Wnoclang-diagnostic-unknown-warning-option"
         # export CFLAGS="$CFLAGS -Wall -Wextra"
         export CFLAGS="$CFLAGS -g -fno-limit-debug-info -fno-omit-frame-pointer"  # some nice debugging flags
         # export CFLAGS="$CFLAGS -march=native" # this seems to cause bad crashes with Eigen stuff :skull-bones:

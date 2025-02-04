@@ -1,12 +1,12 @@
 [core]
-	editor = flatpak run re.sonny.Commit @@
+	editor = flatpak run re.sonny.Commit
 
 [user]
 	name = Nicu Stiurca
 	email = nstiurca@pm.me
 
 [includeIf "hasconfig:remote.*.url:*:traclabs/**"]
-	path = ~/.gitconfig.traclabs
+	path = ~/.config/user-traclabs.gitconfig
 
 [push]
 	default = current
