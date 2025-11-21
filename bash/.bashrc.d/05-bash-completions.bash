@@ -9,3 +9,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Dynamic Jiujitsu-SCM completion
+# https://jj-vcs.github.io/jj/latest/install-and-setup/#bash
+source <(COMPLETE=bash jj)
+
