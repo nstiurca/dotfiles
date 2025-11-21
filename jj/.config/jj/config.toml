@@ -1,0 +1,10 @@
+#:schema https://jj-vcs.github.io/jj/latest/config-schema.json
+
+[user]
+name = "Nicu Știurcă"
+
+[ui]
+editor = "nvim"
+diff-editor = "meld-3"
+merge-editor = "meld"
+
